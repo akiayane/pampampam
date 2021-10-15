@@ -1,0 +1,7 @@
+{
+  "name": "test eggplant",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
