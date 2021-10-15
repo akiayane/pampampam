@@ -35,160 +35,39 @@ namespace Calculator
 
         }
 
-        private void num_1_Click(object sender, EventArgs e)
+        private void num_click(object sender, EventArgs e) 
         {
-            if (result) 
+            if (sender is Button) 
             {
-                label1.Text ="1";
-                result = false;
-                return;
+                if (result)
+                {
+                    label1.Text = (sender as Button).Text;
+                    result = false;
+                    return;
+                }
+                label1.Text = label1.Text + (sender as Button).Text;
             }
-            label1.Text = label1.Text + "1";
         }
 
-        private void num_2_Click(object sender, EventArgs e)
-        {
-            if (result)
-            {
-                label1.Text = "2";
-                result = false;
-                return;
-            }
-            label1.Text = label1.Text + "2";
-        }
-
-        private void num_3_Click(object sender, EventArgs e)
-        {
-            if (result)
-            {
-                label1.Text = "3";
-                result = false;
-                return;
-            }
-            label1.Text = label1.Text + "3";
-        }
-
-        private void num_4_Click(object sender, EventArgs e)
-        {
-            if (result)
-            {
-                label1.Text = "4";
-                result = false;
-                return;
-            }
-            label1.Text = label1.Text + "4";
-        }
-
-        private void num_5_Click(object sender, EventArgs e)
-        {
-            if (result)
-            {
-                label1.Text = "5";
-                result = false;
-                return;
-            }
-            label1.Text = label1.Text + "5";
-        }
-
-        private void num_6_Click(object sender, EventArgs e)
-        {
-            if (result)
-            {
-                label1.Text = "6";
-                result = false;
-                return;
-            }
-            label1.Text = label1.Text + "6";
-        }
-
-        private void num_7_Click(object sender, EventArgs e)
-        {
-            if (result)
-            {
-                label1.Text = "7";
-                result = false;
-                return;
-            }
-            label1.Text = label1.Text + "7";
-        }
-
-        private void num_8_Click(object sender, EventArgs e)
-        {
-            if (result)
-            {
-                label1.Text = "8";
-                result = false;
-                return;
-            }
-            label1.Text = label1.Text + "8";
-        }
-
-        private void num_9_Click(object sender, EventArgs e)
-        {
-            if (result)
-            {
-                label1.Text = "9";
-                result = false;
-                return;
-            }
-            label1.Text = label1.Text + "9";
-        }
-
-        private void num_0_Click(object sender, EventArgs e)
-        {
-            if (result)
-            {
-                label1.Text = "0";
-                result = false;
-                return;
-            }
-            label1.Text = label1.Text + "0";
-        }
 
         private void clear_Click(object sender, EventArgs e)
         {
             label1.Text = "";
         }
 
-        private void add_Click(object sender, EventArgs e)
+        private void operand_Click(object sender, EventArgs e) 
         {
-            if (!label1.Equals("")) 
+            if (sender is Button) 
             {
-                first = float.Parse(label1.Text);
-                label1.Text = "";
-                operand = "add";
+                if (!label1.Equals(""))
+                {
+                    first = float.Parse(label1.Text);
+                    label1.Text = "";
+                    operand = (sender as Button).Text;
+                }
             }
         }
 
-        private void sub_Click(object sender, EventArgs e)
-        {
-            if (!label1.Equals(""))
-            {
-                first = float.Parse(label1.Text);
-                label1.Text = "";
-                operand = "sub";
-            }
-        }
-
-        private void mult_Click(object sender, EventArgs e)
-        {
-            if (!label1.Equals(""))
-            {
-                first = float.Parse(label1.Text);
-                label1.Text = "";
-                operand = "mult";
-            }
-        }
-
-        private void div_Click(object sender, EventArgs e)
-        {
-            if (!label1.Equals(""))
-            {
-                first = float.Parse(label1.Text);
-                label1.Text = "";
-                operand = "div";
-            }
-        }
 
         private void equal_Click(object sender, EventArgs e)
         {
@@ -199,19 +78,19 @@ namespace Calculator
 
                 switch (operand) 
                 {
-                    case "add":
+                    case "+":
                         res = first + last;
                         label1.Text = res.ToString();
                         break;
-                    case "sub":
+                    case "-":
                         res = first - last;
                         label1.Text = res.ToString();
                         break;
-                    case "mult":
+                    case "*":
                         res = first * last;
                         label1.Text = res.ToString();
                         break;
-                    case "div":
+                    case "/":
                         res = first / last;
                         label1.Text = res.ToString();
                         break;

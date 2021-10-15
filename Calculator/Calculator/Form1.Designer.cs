@@ -69,7 +69,7 @@ namespace Calculator
             this.num_7.TabIndex = 1;
             this.num_7.Text = "7";
             this.num_7.UseVisualStyleBackColor = true;
-            this.num_7.Click += new System.EventHandler(this.num_7_Click);
+            this.num_7.Click += new System.EventHandler(this.num_click);
             // 
             // num_8
             // 
@@ -79,7 +79,7 @@ namespace Calculator
             this.num_8.TabIndex = 2;
             this.num_8.Text = "8";
             this.num_8.UseVisualStyleBackColor = true;
-            this.num_8.Click += new System.EventHandler(this.num_8_Click);
+            this.num_8.Click += new System.EventHandler(this.num_click);
             // 
             // num_9
             // 
@@ -89,7 +89,7 @@ namespace Calculator
             this.num_9.TabIndex = 3;
             this.num_9.Text = "9";
             this.num_9.UseVisualStyleBackColor = true;
-            this.num_9.Click += new System.EventHandler(this.num_9_Click);
+            this.num_9.Click += new System.EventHandler(this.num_click);
             // 
             // num_4
             // 
@@ -99,7 +99,7 @@ namespace Calculator
             this.num_4.TabIndex = 4;
             this.num_4.Text = "4";
             this.num_4.UseVisualStyleBackColor = true;
-            this.num_4.Click += new System.EventHandler(this.num_4_Click);
+            this.num_4.Click += new System.EventHandler(this.num_click);
             // 
             // num_5
             // 
@@ -109,7 +109,7 @@ namespace Calculator
             this.num_5.TabIndex = 5;
             this.num_5.Text = "5";
             this.num_5.UseVisualStyleBackColor = true;
-            this.num_5.Click += new System.EventHandler(this.num_5_Click);
+            this.num_5.Click += new System.EventHandler(this.num_click);
             // 
             // num_6
             // 
@@ -119,7 +119,7 @@ namespace Calculator
             this.num_6.TabIndex = 6;
             this.num_6.Text = "6";
             this.num_6.UseVisualStyleBackColor = true;
-            this.num_6.Click += new System.EventHandler(this.num_6_Click);
+            this.num_6.Click += new System.EventHandler(this.num_click);
             // 
             // num_1
             // 
@@ -129,7 +129,7 @@ namespace Calculator
             this.num_1.TabIndex = 7;
             this.num_1.Text = "1";
             this.num_1.UseVisualStyleBackColor = true;
-            this.num_1.Click += new System.EventHandler(this.num_1_Click);
+            this.num_1.Click += new System.EventHandler(this.num_click);
             // 
             // num_2
             // 
@@ -139,7 +139,7 @@ namespace Calculator
             this.num_2.TabIndex = 8;
             this.num_2.Text = "2";
             this.num_2.UseVisualStyleBackColor = true;
-            this.num_2.Click += new System.EventHandler(this.num_2_Click);
+            this.num_2.Click += new System.EventHandler(this.num_click);
             // 
             // num_3
             // 
@@ -149,7 +149,7 @@ namespace Calculator
             this.num_3.TabIndex = 9;
             this.num_3.Text = "3";
             this.num_3.UseVisualStyleBackColor = true;
-            this.num_3.Click += new System.EventHandler(this.num_3_Click);
+            this.num_3.Click += new System.EventHandler(this.num_click);
             // 
             // clear
             // 
@@ -169,7 +169,7 @@ namespace Calculator
             this.num_0.TabIndex = 11;
             this.num_0.Text = "0";
             this.num_0.UseVisualStyleBackColor = true;
-            this.num_0.Click += new System.EventHandler(this.num_0_Click);
+            this.num_0.Click += new System.EventHandler(this.num_click);
             // 
             // equal
             // 
@@ -189,7 +189,7 @@ namespace Calculator
             this.div.TabIndex = 13;
             this.div.Text = "/";
             this.div.UseVisualStyleBackColor = true;
-            this.div.Click += new System.EventHandler(this.div_Click);
+            this.div.Click += new System.EventHandler(this.operand_Click);
             // 
             // mult
             // 
@@ -199,7 +199,7 @@ namespace Calculator
             this.mult.TabIndex = 14;
             this.mult.Text = "*";
             this.mult.UseVisualStyleBackColor = true;
-            this.mult.Click += new System.EventHandler(this.mult_Click);
+            this.mult.Click += new System.EventHandler(this.operand_Click);
             // 
             // sub
             // 
@@ -209,7 +209,7 @@ namespace Calculator
             this.sub.TabIndex = 15;
             this.sub.Text = "-";
             this.sub.UseVisualStyleBackColor = true;
-            this.sub.Click += new System.EventHandler(this.sub_Click);
+            this.sub.Click += new System.EventHandler(this.operand_Click);
             // 
             // add
             // 
@@ -219,7 +219,7 @@ namespace Calculator
             this.add.TabIndex = 16;
             this.add.Text = "+";
             this.add.UseVisualStyleBackColor = true;
-            this.add.Click += new System.EventHandler(this.add_Click);
+            this.add.Click += new System.EventHandler(this.operand_Click);
             // 
             // Form1
             // 
